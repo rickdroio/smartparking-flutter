@@ -1,0 +1,32 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/http-proxy-agent": "^2.0.1",
+    "firebase-admin": "~8.2.0",
+    "firebase-functions": "^3.0.2",
+    "https-proxy-agent": "^2.2.2",
+    "moment": "~2.24.0",
+    "query-string": "~6.8.1",
+    "request": "~2.88.0",
+    "request-promise": "~4.2.4",
+    "uniqid": "^5.0.3"
+  },
+  "devDependencies": {
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "private": true
+}
